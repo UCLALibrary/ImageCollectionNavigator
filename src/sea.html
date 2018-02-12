@@ -1,0 +1,29 @@
+<!--
+uclalsc_uars100_145_029a.jpg
+uclalsc_uars100_210_007a.jpg
+uclalsc_uars100_900_003a.jpg
+uclalsc_uars100_1102_010a.jpg
+uclalsc_uars100_1151_021a.jpg
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="sea.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="openseadragon/openseadragon.min.js"></script>
+	</head>
+	<body>
+		<div id="openseadragon1" style="width: 800px; height: 600px; margin: 0 auto;"></div>
+		<script type="text/javascript">
+			//var viewer = new OpenSeadragon.Viewer();
+		    var viewer = OpenSeadragon({
+		        id: "openseadragon1",
+		        prefixUrl: "/openseadragon/images/",
+		        tileSources: "Images/uclalsc_uars100_145_029a.jpg"
+		    });
+		</script>
+	</body>
+</html>

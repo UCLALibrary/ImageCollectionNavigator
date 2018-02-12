@@ -1,0 +1,73 @@
+<!--
+uclalsc_uars100_145_029a.jpg
+uclalsc_uars100_210_007a.jpg
+uclalsc_uars100_900_003a.jpg
+uclalsc_uars100_1102_010a.jpg
+uclalsc_uars100_1151_021a.jpg
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="index.css">
+	</head>
+	<body>
+		
+		<div class="col-sm-4 col">
+			<div id="left" class="hid">
+				<img src="Images/uclalsc_uars100_210_007a.jpg" alt="" class="img">
+			</div>
+		</div>
+		<div class="col-sm-4 col">
+			<div class="middle dropdown">
+				<img src="Images/uclalsc_uars100_145_029a.jpg" class="ctr img" alt="">
+				<div class="dropdown-content">
+					<button id="img1">pauley</button>
+					<button id="img2">soccer</button>
+			  	</div>
+			</div>
+		</div>
+		<div class="col-sm-4 col">
+			<div id="right" class="hid">
+				<img src="Images/uclalsc_uars100_900_003a.jpg" alt="" class="img">
+			</div>
+		</div>
+
+		<script>
+			var l = document.getElementById("left");
+			var r = document.getElementById("right");
+			l.style.display = "none"; r.style.display = "none";
+
+			document.getElementById("img1").addEventListener("click", function(){
+				var x = document.getElementById("left");
+			    if (x.style.display === "none") {
+			        x.style.display = "block";
+			    } else {
+			        x.style.display = "none";
+			    }
+			})
+
+			document.getElementById("img2").addEventListener("click", function(){
+				var x = document.getElementById("right");
+			    if (x.style.display === "none") {
+			        x.style.display = "block";
+			    } else {
+			        x.style.display = "none";
+			    }
+			})
+
+			/*function showhide() {
+			    var x = document.getElementById("left");
+			    if (x.style.display === "none") {
+			        x.style.display = "block";
+			    } else {
+			        x.style.display = "none";
+			    }
+			}*/
+		</script>
+	</body>
+</html>
+
