@@ -1,10 +1,11 @@
+#from .models import get_original_url
 from flask import Flask, render_template, request
 app = Flask(__name__)
 
 
 @app.route("/", methods=["GET", "POST"])
 def index():
-    url = "https://www.morleybuilders.com/wp-content/uploads/revslider/UCLA%20Powell%20Library/POW_Ext.jpg"
+    url = "http://cdn1-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/pupporch-9.jpg"
     return render_template("index.html", url=url)
 
 
