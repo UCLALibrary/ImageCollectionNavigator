@@ -26,8 +26,8 @@ for url, tags in data.iteritems():
 
 #now data looks like this
 #{
-#   url1:list_of_tags
-#   url2:list_of_tags
+#   url1:list_of_tags,
+#   url2:list_of_tags,
 #   url3:list_of_tags
 #}
 # Now we can push this into neo4j
@@ -35,6 +35,9 @@ for url, tags in data.iteritems():
 # Create all nodes
 graph = Graph()
 graph.delete_all()
+
+graph.run("CREATE CONSTRAINT ON (n:Image) ASSERT n.url IS UNIQUE")
+
 nodes = []
 for url in data:
     node = Node("Image", url=url)

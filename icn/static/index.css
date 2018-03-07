@@ -1,4 +1,41 @@
+/* ctrl + F5 to update css file in browser */
 #original-image{
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
+}
+
+div.ctr{
+    width: 30%;
+    margin: 3% auto 5% auto;
+}
+
+.image{
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.invis{
+    display: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
 }
