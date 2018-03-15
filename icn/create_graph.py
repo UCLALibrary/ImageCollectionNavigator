@@ -1,6 +1,6 @@
 import csv
 from py2neo import Graph, Relationship, Node
-f = open('fakedata.csv', 'rb')
+f = open('result.csv', 'rb')
 reader = csv.reader(f)
 
 rownum = 0

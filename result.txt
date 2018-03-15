@@ -1,0 +1,140 @@
+uclalsc_uars100_1020_002a.jpg
+medicine chest, medicine cabinet (score = 0.25614)
+beer bottle (score = 0.15064)
+tobacco shop, tobacconist shop, tobacconist (score = 0.04869)
+vending machine (score = 0.04570)
+thimble (score = 0.04451)
+
+uclalsc_uars100_1079_008a.jpg
+catamaran (score = 0.08677)
+schooner (score = 0.03745)
+solar dish, solar collector, solar furnace (score = 0.03057)
+canoe (score = 0.02579)
+wreck (score = 0.01864)
+
+uclalsc_uars100_1214_012a.jpg
+airship, dirigible (score = 0.53868)
+cliff, drop, drop-off (score = 0.03766)
+parachute, chute (score = 0.02868)
+aircraft carrier, carrier, flattop, attack aircraft carrier (score = 0.02173)
+mousetrap (score = 0.01682)
+
+uclalsc_uars100_166_012a.jpg
+suit, suit of clothes (score = 0.60253)
+breakwater, groin, groyne, mole, bulwark, seawall, jetty (score = 0.06828)
+trench coat (score = 0.03022)
+groom, bridegroom (score = 0.01734)
+Loafer (score = 0.01435)
+
+uclalsc_uars100_206_013.jpg
+library (score = 0.21666)
+church, church building (score = 0.07560)
+academic gown, academic robe, judge's robe (score = 0.05870)
+prison, prison house (score = 0.04896)
+bannister, banister, balustrade, balusters, handrail (score = 0.04048)
+
+uclalsc_uars100_272_044a.jpg
+desk (score = 0.09795)
+paper towel (score = 0.09059)
+barber chair (score = 0.07848)
+barbershop (score = 0.06009)
+shoe shop, shoe-shop, shoe store (score = 0.03039)
+
+uclalsc_uars100_308_001a.jpg
+patio, terrace (score = 0.80514)
+rain barrel (score = 0.02572)
+tub, vat (score = 0.01454)
+pot, flowerpot (score = 0.00953)
+barbershop (score = 0.00444)
+
+uclalsc_uars100_352_002a.jpg
+ballplayer, baseball player (score = 0.74956)
+baseball (score = 0.05071)
+rugby ball (score = 0.04649)
+football helmet (score = 0.02485)
+soccer ball (score = 0.02049)
+
+uclalsc_uars100_493_019a.jpg
+balance beam, beam (score = 0.92874)
+parallel bars, bars (score = 0.02485)
+horizontal bar, high bar (score = 0.00942)
+maillot, tank suit (score = 0.00197)
+knee pad (score = 0.00103)
+
+uclalsc_uars100_573_004a.jpg
+barbershop (score = 0.21073)
+restaurant, eating house, eating place, eatery (score = 0.10523)
+cinema, movie theater, movie theatre, movie house, picture palace (score = 0.05091)
+television, television system (score = 0.02929)
+bakery, bakeshop, bakehouse (score = 0.02490)
+
+uclalsc_uars100_611_003.jpg
+cellular telephone, cellular phone, cellphone, cell, mobile phone (score = 0.68375)
+harmonica, mouth organ, harp, mouth harp (score = 0.21824)
+abaya (score = 0.01059)
+Loafer (score = 0.00660)
+notebook, notebook computer (score = 0.00462)
+
+uclalsc_uars100_611_017.jpg
+pajama, pyjama, pj's, jammies (score = 0.09930)
+trench coat (score = 0.05650)
+academic gown, academic robe, judge's robe (score = 0.03984)
+kimono (score = 0.02573)
+suit, suit of clothes (score = 0.02118)
+
+uclalsc_uars100_637_001.jpg
+book jacket, dust cover, dust jacket, dust wrapper (score = 0.31845)
+web site, website, internet site, site (score = 0.12499)
+television, television system (score = 0.06277)
+envelope (score = 0.04671)
+monitor (score = 0.03674)
+
+uclalsc_uars100_714_004a.jpg
+parallel bars, bars (score = 0.47730)
+volleyball (score = 0.06339)
+ballplayer, baseball player (score = 0.01143)
+fire engine, fire truck (score = 0.00910)
+horizontal bar, high bar (score = 0.00897)
+
+uclalsc_uars100_776_041a.jpg
+worm fence, snake fence, snake-rail fence, Virginia fence (score = 0.32149)
+turnstile (score = 0.18219)
+airship, dirigible (score = 0.03906)
+library (score = 0.02854)
+lumbermill, sawmill (score = 0.02835)
+
+uclalsc_uars100_779_003.jpg
+bell cote, bell cot (score = 0.93382)
+chime, bell, gong (score = 0.03325)
+vault (score = 0.00829)
+monastery (score = 0.00189)
+thimble (score = 0.00106)
+
+uclalsc_uars100_780_021.jpg
+medicine chest, medicine cabinet (score = 0.15265)
+theater curtain, theatre curtain (score = 0.10768)
+wardrobe, closet, press (score = 0.09394)
+home theater, home theatre (score = 0.06022)
+entertainment center (score = 0.04478)
+
+uclalsc_uars100_850_009a.jpg
+book jacket, dust cover, dust jacket, dust wrapper (score = 0.93877)
+web site, website, internet site, site (score = 0.00606)
+comic book (score = 0.00540)
+castle (score = 0.00470)
+prison, prison house (score = 0.00421)
+
+uclalsc_uars100_883_001.jpg
+shower curtain (score = 0.15551)
+window shade (score = 0.14930)
+window screen (score = 0.09780)
+theater curtain, theatre curtain (score = 0.03805)
+flagpole, flagstaff (score = 0.01463)
+
+uclalsc_uars100_930_001a.jpg
+mortarboard (score = 0.28354)
+shoe shop, shoe-shop, shoe store (score = 0.07469)
+jigsaw puzzle (score = 0.04648)
+laptop, laptop computer (score = 0.04067)
+book jacket, dust cover, dust jacket, dust wrapper (score = 0.03173)
+

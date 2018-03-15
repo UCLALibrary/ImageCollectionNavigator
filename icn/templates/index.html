@@ -7,24 +7,26 @@
 </head>
 <body>
 
-    <div class="ctr dropdown">
-        <img src="{{ url }}" id="original-image" alt="CENTER IMAGE">
-        <div class="dropdown-content">
-            <form action="{{ url_for('add_images') }}" method="post">
-                <input type="text" name="tag" class="invis" value="puppy">
-                <input type="text" name="url" class="invis" value="{{ url }}">
-                <input type="submit" value="puppy">
-            </form>
-            <form action="{{ url_for('add_images') }}" method="post">
-                <input type="text" name="tag" class="invis" value="german_shepherd">
-                <input type="text" name="url" class="invis" value="{{ url }}">
-                <input type="submit" value="german_shepherd">
-            </form>
-            {# <button id="tag1">puppy</button>
-            <button id="tag2">german shepherd</button> #}
+    <div class="page">
+        <div class="window dropdown">
+            <img src="{{ url }}" class="image" id="original-image" alt="CENTER IMAGE">
+            <div class="dropdown-content">
+                <form action="{{ url_for('add_images') }}" method="post">
+                    <input type="text" name="tag" class="invis" value="puppy">
+                    <input type="text" name="url" class="invis" value="{{ url }}">
+                    <input type="submit" value="puppy">
+                </form>
+                <form action="{{ url_for('add_images') }}" method="post">
+                    <input type="text" name="tag" class="invis" value="german_shepherd">
+                    <input type="text" name="url" class="invis" value="{{ url }}">
+                    <input type="submit" value="german_shepherd">
+                </form>
+                {# <button id="tag1">puppy</button>
+                <button id="tag2">german shepherd</button> #}
+            </div>
         </div>
-    </div>
 
-    {% include "images.html" %}
+        {% include "images.html" %}
+    </div>
 </body>
 </html>
