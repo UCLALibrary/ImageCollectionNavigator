@@ -32,12 +32,19 @@ with open ('name-itemTitle.csv', 'rU') as csvfile:
 				#tagsFiltered.append(tag)
 		image_tags.append(tagsFiltered)	
 
+# map tags to corresponding images
 data = {}
-print (titles)
-print (image_tags)
 counter = 0
 for image in images:
 	data[image] = image_tags[counter]
 	counter = counter + 1
 
-print(data)
+result_file = open('metadata_tags.csv', 'w')
+for k, v in data.items():
+	result_file.write(k+",")
+	for tag in v:
+		result_file.write(tag+",")
+	result_file.write("\n")
+result_file.close()
+
+#print(data)
