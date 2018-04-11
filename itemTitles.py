@@ -12,21 +12,24 @@ with open ('name-itemTitle.csv', 'rU') as csvfile:
 	images = []
 	titles = []
 	image_tags = []
-	#data = {}
+	#save image names and titles into 2 list
 	for row in reader:
 		images.append(row['FileName'])
 		titles.append(row['ItemTitle'])
-		#data[row['FileName']] = row['ItemTitle']
+	
+	#tokenize meaningful words in title
 	for title in titles:
 		tags = word_tokenize(title)
 		tagsFiltered = []
 		for tag in tags:
+			#exclude stopwords and punctuation
 			if tag not in stopWords and tag not in punctuation:
-				'''if tagsFiltered[-1] in months:
+				#remove month and dates (too detail, don't really need it)
+				if len(tagsFiltered) > 0 and tagsFiltered[-1] in months:
 					tagsFiltered.pop()
 				else:
-					tagsFiltered.append(tag)'''
-				tagsFiltered.append(tag)
+					tagsFiltered.append(tag)
+				#tagsFiltered.append(tag)
 		image_tags.append(tagsFiltered)	
 
 data = {}
