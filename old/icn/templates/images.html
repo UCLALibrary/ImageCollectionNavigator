@@ -1,0 +1,27 @@
+
+
+{% for u, tags in urls_tags %}
+        <div class="dropdown window">
+            <img src="{{ u }}" class="image">
+            <div class="dropdown-content">
+                {% for tag in tags %}
+                    <form action="{{ url_for('add_images') }}" method="post">
+                        <input type="text" name="tag" class="invis" value="{{ tag }}">
+                        <input type="text" name="url" class="invis" value="{{ u }}">
+                        <input type="submit" value="{{ tag }}">
+                    </form>
+                {% endfor %}
+            </div>
+        </div>
+{% endfor %}
+
+{#
+        <b>{{ row.post.title }}</b>
+        {% if request.path == "/" %}
+        by <a href="{{ url_for('profile', username=row.username) }}">{{ row.username }}</a>
+        {% endif %}
+        on {{ row.post.date }}
+        <a href="{{ url_for('like_post', post_id=row.post.id) }}">like</a><br>
+        <i>{{ ", ".join(row.tags) }}</i><br>
+        {{ row.post.text }}
+#}
