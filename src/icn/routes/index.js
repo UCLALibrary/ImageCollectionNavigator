@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
+//var sleep = require('sleep');
+
 var mongodb = require('mongodb');
 var fs = require('fs');
-var Promise = require("bluebird");
+
+var query = require('./query.js');
 
 
 /* GET home page. */
@@ -10,7 +13,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-
+//NOT USING THIS METHOD, CURRENTLY
 router.get('/images', function(req, res){
 	//console.log("ROUTER.GET");
 	var MongoClient = mongodb.MongoClient;
@@ -43,6 +46,34 @@ router.get('/images', function(req, res){
 	});
 });
 
+router.get('/api/hello', (req, res) => {
+  res.send({ express: query.testing("test string") });
+});
 
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+router.get('/api/tags/:url', (req, res) => {
+	var img = req.params["url"];
+	console.log("the url param we got was " + img);
+	//var obj = query.getTags(url);
+    var tags = [];
+	MongoClient.connect(url, function(err, db) {
+      if (err) throw err;
+      var dbo = db.db("imgs");
+      var query = {"url" : img};
+      //query for tags given an img
+      dbo.collection("imgs").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        res.send(result[0]["tags"]);
+      });
+      db.close();
+    });
+});
+
+router.get('/api/imgs', (req, res) => {
+	var tag = req.params["tag"];
+
+});
 
 module.exports = router;
