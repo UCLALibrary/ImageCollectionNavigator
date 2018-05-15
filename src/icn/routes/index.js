@@ -71,8 +71,24 @@ router.get('/api/tags/:url', (req, res) => {
     });
 });
 
-router.get('/api/imgs', (req, res) => {
+router.get('/api/imgs/:tag', (req, res) => {
 	var tag = req.params["tag"];
+	console.log("the tag param we got was " + tag);
+
+	MongoClient.connect(url, function(err, db) {
+	    if (err) throw err;
+	    var dbo = db.db("imgs");
+	    var query = {};
+	    //query for imgs given a tag
+	    var urls = [];
+	    dbo.collection("tags").find(query).toArray(function(err, result) {
+	      if (err) throw err;
+	      res.send(result[0][tag]);
+	      //urls = result[0]["library"];
+	      //console.log(urls);
+	    });
+	    db.close();
+	  });
 
 });
 
