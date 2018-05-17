@@ -6,9 +6,8 @@ const Example = (props) => {
   return (
     <div className="SearchBox">
       <InputGroup>
-        <Input placeholder="Search Images" />
-        <InputGroupAddon addonType="prepend">Search</InputGroupAddon>
-      </InputGroup>
+        <Input placeholder="Enter tags here" />
+       </InputGroup>
       <br />
     </div>
   );

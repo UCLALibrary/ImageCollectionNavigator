@@ -1,5 +1,6 @@
 .App {
 text-align:center;
+font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -38,11 +39,6 @@ text-align:center;
   height: 100px;
   padding-bottom:20px;
 }
-
-
-
-
-
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

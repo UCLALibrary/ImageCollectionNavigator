@@ -7,15 +7,17 @@ const Example = (props) => {
   return (
     <div>
       <Jumbotron className="Jumbotron">
-        <h1 className="header">Welcome to UCLA's Image Navigation Portal </h1>
-        <p className="content">Explore 100 years of history and heritage through the eyes of images.</p>
+        <h1 className="header">Explore our journey</h1>
+        <p className="content">
+            In spirit of UCLAs centennial campaign, this visualization
+            takes you through our 100 year history.
+            The interactive display finds and groups together related
+            images powered by machine learning algorithms.</p>
         <hr className="subcontent" />
-        <p>It uses utility classes for typgraphy and spacing to space content out within the larger container.</p>
         <p className="buton">
-          <Button color="primary">Explore Now</Button>
           <SearchBox/>
+          <Button color="primary">Search</Button>
         </p>
-        
       </Jumbotron>
     </div>
   );

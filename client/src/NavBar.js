@@ -20,21 +20,7 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand href="/" className="mr-auto">UCLA YRL</NavbarBrand>
-          <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-          <Collapse isOpen={!this.state.collapsed} navbar>
-            <Nav navbar >
-              <NavItem>
-                <NavLink href="#"> About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#"> Collage View </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#"> Gallery View </NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
+          <NavbarBrand href="/" className="mr-auto">UCLA Image Collection Navigator</NavbarBrand>
         </Navbar>
       </div>
     );
