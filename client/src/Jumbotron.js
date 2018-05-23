@@ -17,7 +17,9 @@ const Example = (props) => {
         <hr className="subcontent" />
         <p className="buton">
           <SearchBox/>
-          <Button color="primary">Search</Button>
+          <Link to='/Gallery'>
+            <Button color="primary">Search</Button>
+          </Link>
         </p>
       </Jumbotron>
     </div>
