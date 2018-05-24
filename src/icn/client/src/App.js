@@ -32,4 +32,13 @@ class App extends Component {
   }
 }
 
+function test(){
+  fetch('/api/tags/')
+  .then(results => {
+    return results.json();
+  }).then(data => {
+    console.log(data);
+  })
+}
+
 export default App;
