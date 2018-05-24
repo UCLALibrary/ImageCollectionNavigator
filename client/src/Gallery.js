@@ -15,6 +15,10 @@ const imageUrls = [
 ];
 
 class Gallery extends Component {
+  fooBar () {
+    alert('Hello World');
+  }
+
   render() {
     return (
       <div className= "gallery">
@@ -24,7 +28,9 @@ class Gallery extends Component {
 					<Col md='4' className= "Cards">
 						<CardImg top width="100%"
 							src={imageUrl}
-							alt="Card image cap" key={imageUrl}/>
+							alt="Card image cap" 
+							onClick={this.fooBar}
+							key={imageUrl}/>
 					</Col>
 					)
 				}
