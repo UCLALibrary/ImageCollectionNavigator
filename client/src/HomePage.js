@@ -18,7 +18,7 @@ class HomePage extends Component {
         <Jumbotron/>
 
         <Container className="CardsContainer">
-          <Row >
+          <Row>
             <Col md='4' className= "Cards">
               <Link to='/Gallery'>
                 <Card>

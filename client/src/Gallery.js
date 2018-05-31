@@ -15,20 +15,43 @@ const imageUrls = [
 ];
 
 class Gallery extends Component {
-  render() {
+
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
+
+  render(event) {
+
+    var url = "http://172.31.93.116";
+    var port = "3000";
+    var route = "/api/imgs/";
+    var request = url + ":" + port + route + this.props.location.search.slice(7);
+
+    fetch(request)
+    .then(results => {
+      return results.json();
+    }).then(data => {
+      let results = data;
+      console.log(results);
+      this.setState({value: results});
+      alert(results);
+    })
+
     return (
       <div className= "gallery">
-      	<h2> Gallery </h2>
+      	<h3>Gallery</h3>
       		<Row>
-				{ imageUrls.map(imageUrl =>
+				{ this.event.state.map(imageUrl =>
 					<Col md='4' className= "Cards">
 						<CardImg top width="100%"
 							src={imageUrl}
-							alt="Card image cap" key={imageUrl}/>
+							alt="Card image cap"
+							key={imageUrl}/>
 					</Col>
 					)
 				}
-			</Row> 
+			</Row>
       </div>
     );
   }
