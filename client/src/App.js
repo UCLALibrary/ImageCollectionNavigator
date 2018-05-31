@@ -17,10 +17,11 @@ class App extends Component {
     );
   }
 }
+
 /*
 var url = "http://172.31.93.116";
 var port = "3000";
-//CHANGE THESE 
+//CHANGE THESE
 
 var results = [];
 function getTags(img){
@@ -61,7 +62,5 @@ console.log(testtags);
 function getAllImgs(img){
 
 }*/
-
-
 
 export default App;
