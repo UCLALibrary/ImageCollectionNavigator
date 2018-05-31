@@ -4,7 +4,9 @@ This is the main repo for the BuildUCLA web team's project to build an experimen
 
 ------------------
 To start the node server:
+
 $ cd ImageCollectionNavigator/src/icn
+
 $ npm start
 
 ------------------
@@ -13,6 +15,8 @@ To start MongoDB:
 $ cd ImageCollectionNavigator/src/icn
 
 $ mongod --dbpath <Path to ImageCollectionNavigator/src/icn/data>
+
+
 
 To push data into Mongo:
 
