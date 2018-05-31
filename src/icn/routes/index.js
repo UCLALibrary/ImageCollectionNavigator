@@ -65,7 +65,10 @@ router.get('/api/tags/:url', (req, res) => {
       //query for tags given an img
       dbo.collection("imgs").find(query).toArray(function(err, result) {
         if (err) throw err;
-        res.send(result[0]["tags"]);
+        if (result == [])
+        	res.send([]);
+        else
+        	res.send(result[0]["tags"]);
       });
       db.close();
     });
@@ -83,7 +86,10 @@ router.get('/api/imgs/:tag', (req, res) => {
 	    var urls = [];
 	    dbo.collection("tags").find(query).toArray(function(err, result) {
 	      if (err) throw err;
-	      res.send(result[0][tag]);
+          if (tag in result[0])
+	     	res.send(result[0][tag]);
+	      else
+	      	res.send([]);
 	      //urls = result[0]["library"];
 	      //console.log(urls);
 	    });
