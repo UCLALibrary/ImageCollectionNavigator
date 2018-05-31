@@ -9,14 +9,20 @@ $ npm start
 
 ------------------
 To start MongoDB:
+
 $ cd ImageCollectionNavigator/src/icn
+
 $ mongod --dbpath <Path to ImageCollectionNavigator/src/icn/data>
 
 To push data into Mongo:
+
 $ cd ImageCollectionNavigator/src/icn/routes
+
 $ node addimgs
 
 ------------------
 To start React:
+
 $ cd ImageCollectionNavigator/client
+
 $ npm start
