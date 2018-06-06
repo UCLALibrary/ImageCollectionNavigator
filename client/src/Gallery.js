@@ -6,34 +6,62 @@ import { Card, CardImg, CardText, CardBody,
 import {Button, Container, Row, Col} from 'reactstrap';
 
 var imageTitles = [];
-var imageURLs = [];
+var new_tags_str = "";
+
+var url = "http://172.30.15.25";
+var port = "3000";
+
+var imgs_route = "/api/imgs/";
+var tags_route = "/api/tags/";
 
 class Gallery extends Component {
 
   constructor(props) {
     super(props);
     this.state = {imgurls: []};
+    var tags = this.props.location.search.slice(7).split('-');
+    
+    console.log(this.props.location.search.slice(7));
+    console.log(tags);
 
-    var url = "http://172.30.15.25";
-    var port = "3000";
-    var route = "/api/imgs/";
-    var request = url + ":" + port + route + this.props.location.search.slice(7);
+    var imageURLs = [];
+
+    for (var ind= 0; ind < tags.length; ind++) {
+      var request = url + ":" + port + imgs_route + tags[ind];
+      // console.log(request);
+      fetch(request)
+        .then(results => {
+          return results.json();
+        }).then(data => {
+          imageTitles = data;
+          var len = imageTitles.length;
+          for (var index = 0; index < len; index++) {
+            var url = process.env.PUBLIC_URL + '/images/' + imageTitles[index]
+            if (!imageURLs.includes(url))
+              imageURLs.push(url);
+              console.log(imageURLs);
+          }
+          console.log(imageURLs);
+          this.setState({imgurls: imageURLs});
+        })
+    }
+  }
+
+  getAllTags(img) {
+    this.state = {new_tags: []};
+    console.log(img);
+    var img_name = img.split('/')[2];
+    var request = url + ":" + port + tags_route + img_name;
 
     fetch(request)
     .then(results => {
       return results.json();
     }).then(data => {
-    	imageTitles = data;
-    	var len = imageTitles.length;
-	  	for (var index = 0; index < len; index++){
-	  		imageURLs.push(process.env.PUBLIC_URL + '/images/' + imageTitles[index]);
-	  	}
-	    console.log(imageURLs);
-      console.log("hello");
-    	this.setState({imgurls: imageURLs});
+      new_tags_str = data.join('-');
+      console.log(new_tags_str);
+
     })
-    console.log(imageURLs);
-    console.log(this.state.imgurls)
+
   }
 
   render(event) {
@@ -44,10 +72,16 @@ class Gallery extends Component {
       		<Row>
 				{ this.state.imgurls.map(imageUrl =>
 					<Col md='4' className= "Cards">
-						<CardImg top width="100%"
-							src={imageUrl}
-							alt="Card image cap"
-							key={imageUrl}/>
+						<Link to={{
+              pathname: '/Gallery',
+              search: '?query=' + {new_tags_str}}}>
+                <CardImg width="100%"
+    							src={imageUrl}
+    							alt="Card image cap"
+    							key={imageUrl}
+                  onClick={(e) => this.getAllTags(imageUrl, e)}
+                />
+            </Link>
 					</Col>
 					)
 				}
