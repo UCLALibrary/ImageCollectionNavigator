@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet');
+
+.top{
+	background: white;
+	margin-bottom: 2%;
+}
+
+.gallery{
+	background: #e6e6e6;
+	background: #70798c;
+	padding-bottom: 2%;
+}
+
+
+h1{
+	padding-top: 2%;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	font-weight: lighter;
+}
+
+p{
+	padding-bottom: 2%;
+	font-family: 'Poppins', sans-serif;
+	text-align: center;
+}
+
 .images {
   width: 50px;
   height: 50px;
